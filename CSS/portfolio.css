@@ -1,0 +1,200 @@
+/* BODY */
+body {
+    margin: 0%;
+}
+
+/* NAVBAR */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* NAVBAR TEXT */
+.navbar a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+/* NAVBAR HOVER EFFECT */
+.navbar a:hover {
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+}
+
+/* NAVBAR HOME BUTTOM */
+.navbar a.active {
+    background-color: darkgray;
+}
+
+/* VIDEO */
+#Typing_Keyboard {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+/* VIDEO TEXT OVERLAY */
+.Video_text {
+    background: rgba(0, 0, 0, .7);
+    color: whitesmoke;
+    width: 100%;
+    padding: 15px;
+    margin-top: 25%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 2%;
+    height: 450px;
+    background-color: whitesmoke;
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3.5%;
+    height: 450px;
+    background-color: #292828;
+}
+
+.Column_3 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3.5%;
+    height: 450px;
+    background-color: #292828;
+}
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    color: black;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+center {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a {
+    color: blue;
+}
+
+q {
+    font-style: italic;
+    font-weight: bold;
+}
+
+img {
+    filter: grayscale(50%);
+    border-radius: 10px;
+    max-width: 100%;
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+    transform: scale(1.2);
+    transition: transfrom 1s;
+}
+
+form {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+center:hover {
+    transition: transform 2s;
+    transform: scale(1.01); 
+}
+
+h1:hover {
+    color: black;
+    font-weight: normal;
+}
+
+img:hover {
+    filter: grayscale(10%);
+    transition: transform 1.5s;
+    transform: scale(1.01)
+}
+
+footer {
+    padding: 2%;
+    background-color: whitesmoke;
+}
