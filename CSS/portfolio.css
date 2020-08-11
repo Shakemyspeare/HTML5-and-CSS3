@@ -166,7 +166,7 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: .1vw;
     font-size: 1.5vw;
     background-color: rgba(0, 0, 0, .75);
@@ -234,7 +234,7 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-top: 3%;
     color: black;
@@ -355,6 +355,7 @@ img:hover {
 
 .form-popup {
     border: 1px solid black;
+    border-radius: 8px;
     z-index: 8;
     display: none;
     position: fixed;
