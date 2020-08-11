@@ -33,6 +33,8 @@
 <!--BEGIN VIDEO TEXT OVERLAY-->
     <div class="Video_text">
         <h1 style="color: whitesmoke;">Zackary Bonin's Portfolio</h1>
+        <br>
+        <br>
             <p>
                 <strong>
                     <center>
@@ -42,6 +44,7 @@
                         <br>-Martin Fowler
                         <br>
                         <br>
+                        <br>
                         My name is Zackary Bonin. Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
                         <br>Thank you for stopping by and enjoy!
                     </center>
@@ -49,6 +52,70 @@
             </p>
     </div>
 <!--END VIDEO TEXT OVERLAY-->
+
+<!--BEGIN SLIDESHOW SECTION-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 /6</div>
+                        <img class="Slide_Show_Images" src="./CSS/Images/Slideshow/img_1.jpg" style="width: 100%;">
+                            <div class="text">testing</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">2 /6</div>
+                        <img class="Slide_Show_Images" src="./CSS/Images/Slideshow/img_2.jpg" style="width: 100%;">
+                            <div class="text">testing</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 /6</div>
+                        <img class="Slide_Show_Images" src="./CSS/Images/Slideshow/img_3.jpg" style="width: 100%;">
+                            <div class="text">testing</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 /6</div>
+                        <img class="Slide_Show_Images" src="./CSS/Images/Slideshow/img_4.jpg" style="width: 100%;">
+                            <div class="text">testing</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 /6</div>
+                        <img class="Slide_Show_Images" src="./CSS/Images/Slideshow/img_5.jpg" style="width: 100%;">
+                            <div class="text">testing</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">6 /6</div>
+                        <img class="Slide_Show_Images" src="./CSS/Images/Slideshow/img_6.jpg" style="width: 100%;">
+                            <div class="text">
+                            <a onclick="openForm()" href="#Contact" style="color: whitesmoke;">Contact me now!</a>
+                            </div>
+                </div>  
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+                <br>
+                <div style="text-align: center">
+
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!--END SLIDESHOW SECTION-->
 
 <!--BEGIN ABOUT SECTION-->
     <div class="Row" id="About">
@@ -83,21 +150,21 @@
 <!--END GITHUB SECTION-->
 
 <!--CONTACT SECTION-->
-    <div class="Row" id="Contact">
-        <div class="Column_3">
-            <img src="./CSS/Images/Contact.jpg" alt="Contact_image">
-        </div>
-
-        <div class="Column_1">
-            <h1>Contact</h1>
-                <form action="" method="GET">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" placeholder="Please enter your Email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please enter your message here">
-                        <input type="submit" value="Submit">
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/zack.bonin@gmial.com" method="POST" class="form-container">
+                <h1>Contact</h1>
+                    <label for="name"><b>Name:</b</label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="text" placeholder="Please enter your phone number here" name="phone" required>
+                    <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Please enter your email here" name="email" required>
+                    <label for="message"><b>Message:</b></label>
+                        <input type="text" placeholder="Please enter your message here" name="message" required>
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
         </div>
     </div>
@@ -110,6 +177,8 @@
         </p>
     </footer>
 <!--END FOOTER SECTION-->
+
+    <script src="./JS/JavaScript.js"></script>
         
     </body> 
 </html>

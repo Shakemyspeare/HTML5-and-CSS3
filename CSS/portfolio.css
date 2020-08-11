@@ -1,7 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* BODY */
 body {
     margin: 0%;
 }
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+  }
 
 /* NAVBAR */
 .navbar {
@@ -11,6 +20,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
+    animation: moveNav 2s;
 }
 
 /* NAVBAR TEXT */
@@ -21,9 +31,16 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
+    font-size: x-large;
     text-align: center;
+    animation: movenavText 3s;
 }
+
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+  }
+
 
 /* NAVBAR HOVER EFFECT */
 .navbar a:hover {
@@ -37,6 +54,15 @@ body {
     background-color: darkgray;
 }
 
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(2,2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
 /* VIDEO */
 #Typing_Keyboard {
     position: fixed;
@@ -44,6 +70,7 @@ body {
     bottom: 0;
     min-width: 100%;
     z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
 }
 
 /* VIDEO TEXT OVERLAY */
@@ -52,11 +79,133 @@ body {
     color: whitesmoke;
     width: 100%;
     padding: 15px;
-    margin-top: 25%;
+    height: 570px;
+    margin-top: 28%;
+        position: relative;
+    animation: movevideoText 5s;
 }
+
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
+  }
 
 * {
     box-sizing: border-box;
+}
+
+/*SLIDESHOW STYLING*/
+#Slideshow_background {
+    background: rgba(255,255,255, 0.50);
+}
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*SLIDESHOW CONTAINER*/
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+/*IMAGES CONTAINED WITHIN SLIDESHOW*/
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: auto;
+}
+
+/*NEXT AND PREVIOUS BUTTONS*/
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+/*POSITIONING THE RIGHT-HAND NEXT BUTTON*/
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*HOVER EFFECT ON SLIDE SHOW BUTTONS*/
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, .8);
+    color: whitesmoke;
+}
+
+/*SLIDESHOW TEXT*/
+.text {
+    color: whitesmoke;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, .75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.Slide_Number {
+    color: whitesmoke;
+    position: absolute;
+    top: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1.5vw;
+    font-weight: bold;
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
 }
 
 .Column_1 {
@@ -69,15 +218,6 @@ body {
 }
 
 .Column_2 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    padding-top: 3.5%;
-    height: 450px;
-    background-color: #292828;
-}
-
-.Column_3 {
     float: left;
     width: 50%;
     padding: 10px;
@@ -123,6 +263,7 @@ a {
 }
 
 q {
+    font-size: x-large;
     font-style: italic;
     font-weight: bold;
 }
@@ -192,6 +333,96 @@ img:hover {
     filter: grayscale(10%);
     transition: transform 1.5s;
     transform: scale(1.01)
+}
+
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: whitesmoke;
+    color: black;
+    border: double;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+.form-popup {
+    border: 1px solid black;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 1vw;
+    margin: .5vw 0 .5vw 0;
+    border: 1vw;
+    background: rgba(255, 255, 255, 0.534);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1vw;
+}
+
+/*SUBMIT BUTTON*/
+.form-container .btn {
+    background-color: whitesmoke;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+/*CLOSE BUTTON*/
+.form-container .cancel {
+    background-color: black;
+    color: whitesmoke;
+    border-color: gray;
+}
+
+/*BUTTON STYLING*/
+button {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .4vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+/*HOVER EFFECT FOR BUTTONS*/
+button:hover, .form-container .btn:hover {
+    color: whitesmoke;
+    background-color: black;
+    -webkit-transition-duration: 1s;
+    transition: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form-container .cancel:hover {
+    color: whitesmoke;
+    background-color: darkred;
+    -webkit-transition-duration: 1s;
+    transition: 1s;
+    border-style: solid;
+    border-color: black;
 }
 
 footer {
