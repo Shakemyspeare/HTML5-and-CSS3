@@ -410,7 +410,7 @@ button {
 /*HOVER EFFECT FOR BUTTONS*/
 button:hover, .form-container .btn:hover {
     color: whitesmoke;
-    background-color: black;
+    background-color: green;
     -webkit-transition-duration: 1s;
     transition: 1s;
     border-style: solid;
